@@ -18,3 +18,11 @@ Tags: blog, site, tailwind
 Fag Theme, (C) 2023 WordPress.org
 Fag theme is distributed under the terms of the GNU GPL.
 */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.description {
+    color: deeppink !important;
+}
