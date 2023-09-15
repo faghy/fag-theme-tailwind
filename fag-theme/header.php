@@ -22,6 +22,8 @@
 	<?php get_template_part( 'template-parts/elements/site-nav' ); ?>
 </header>
 
-<div id="body-content">
-	<h1 class="text-red-900 text-9xl border-amber-70">ciaos</h1>
+<div id="body-content bg-red-800">
+	<h1 class="text-orange-900 text-9xl border-amber-700 border-2">ciaos</h1>
+
+
 

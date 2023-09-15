@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "scripts": {
+    "init-tailwind": "npx tailwindcss init",
+    "compile-tailwindcss": "tailwindcss -i style.css -o dist/style.css --watch",
+    "watch-css": "npm-watch",
+    "start": "npm run compile-tailwindcss"
+  }
+}
