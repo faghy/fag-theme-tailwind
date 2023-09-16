@@ -1,11 +1,12 @@
 {
   "devDependencies": {
+    "nodemon": "^3.0.1",
     "tailwindcss": "^3.3.3"
   },
   "scripts": {
     "init-tailwind": "npx tailwindcss init",
-    "compile-tailwindcss": "tailwindcss -i style.css -o dist/style.css --watch",
-    "watch-css": "npm-watch",
-    "start": "npm run compile-tailwindcss"
+    "compile-tailwindfag": "nodemon --exec 'tailwindcss -i style.css -o dist/style.css' --watch 'style.css' --watch './**/*.php'",
+    "watch-fagtheme": "find . -name '*.php' | xargs npm run compile-tailwindfag",
+    "stop-watch-fagtheme": "pkill -f 'nodemon --exec tailwindcss -i style.css -o dist/style.css'"
   }
 }

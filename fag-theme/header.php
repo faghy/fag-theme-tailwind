@@ -19,11 +19,45 @@
 <a class="skip-link screen-reader-text" href="#primary-content"><?php esc_html_e( 'Skip to content', 'bingopress' ); ?></a>
 
 <header>
-	<?php get_template_part( 'template-parts/elements/site-nav' ); ?>
+	<?php //get_template_part( 'template-parts/elements/site-nav' ); ?>
 </header>
 
-<div id="body-content bg-red-800">
-	<h1 class="text-orange-900 text-9xl border-amber-700 border-2">ciaos</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
