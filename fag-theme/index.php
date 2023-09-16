@@ -5,10 +5,9 @@
  */
 get_header();
 ?>
-    <main id="primary" class="site-main pb-10">
-        <div class="flex-none md:flex lg:flex gap-9 pt-8 md:pt-12 lg:pt-16">
-            <div class="w-full "> <!-- aggiungere qui le classi per modificare la larghezza pagina, es: md:w-1/2 lg:w-3/4 -->
-                <div class="flex-none md:flex lg:flex flex-wrap -ml-3.5 -mr-3.5">
+    <main id="primary" class="site-main">
+        <div class="flex">
+            <div class="w-full"> <!-- aggiungere qui le classi per modificare la larghezza pagina, es: md:w-1/2 lg:w-3/4 -->
 					<?php
 					if ( have_posts() ) :
 
@@ -30,7 +29,7 @@ get_header();
                         if (!empty($post_layout)) {
                             echo '<div class="' . esc_attr($post_layout) . '"> pl-3.5 pr-3.5';
                         } else {
-                            echo '<div class="empty-post-layout pl-3.5 pr-3.5">';
+                            echo '<div class="empty-post-layout">';
                             }
                         ?>
 
@@ -46,10 +45,10 @@ get_header();
 
 					endif;
 					?>
-                </div>
             </div>
         </div>
     </main><!-- #main -->
 
+</div><!-- fag .container-fluid -->
 <?php
 get_footer();
