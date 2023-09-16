@@ -21,6 +21,26 @@
 
     <div class="container-fluid">
 
+        <header id="master-head" class="site-header bg-white py-2">
+            <div class="container-fluid mx-auto">
+                <div class="menu-wrap flex-none md:flex lg:flex items-center gap-12 py-4 md:py-0 lg:py-0 items-center">
+                    <?php
+
+                    the_custom_logo();
+                    bloginfo('name');
+
+                // Menu
+                wp_nav_menu(array(
+                    'theme_location' => 'main-menu', // name of menu
+                    'container' => 'nav', // wrapper element, example: 'div' o 'nav'
+                    'container_class' => 'menu-class', // CSS classes for element wrapper
+                    'menu_class' => 'menu-ul-class ', // CSS classes for menu list
+                ));
+
+                    ?>
+                </div>
+            </div>
+        </header><!-- #master-head -->
 
 
 
