@@ -11,7 +11,7 @@
 
 ?>
 	<!-- #footer -->
-	<footer class="relative bg-gray-200 mt-2">
+	<footer class="relative bg-gray-200">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<div class="flex justify-center items-center border-t-2 border-gray-100 py-3 md:space-x-10">
 						<?php

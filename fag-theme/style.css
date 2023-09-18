@@ -23,6 +23,24 @@ Fag theme is distributed under the terms of the GNU GPL.
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+h1 {
+    @apply text-amber-700 text-4xl m-2;
+}
+main {
+    @apply p-2;
+}
+
+article * {
+    @apply p-1;
+}
+
+footer {
+    @apply mt-6;
+}
+
+a {
+    @apply text-indigo-800 font-bold;
+}
 
 
 

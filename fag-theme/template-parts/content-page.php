@@ -12,7 +12,7 @@
 
     <div class="entry-content overflow-hidden">
 		<?php
-		the_title('<h1 class="entry-title text-slate-700 text-4xl">','</h1>');
+		the_title('<h1 class="entry-title">','</h1>');
 		the_content();
 
 		?>
