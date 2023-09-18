@@ -11,7 +11,7 @@
 
 ?>
 	<!-- #footer -->
-	<footer class="relative bg-red-50">
+	<footer class="relative bg-gray-200 mt-2">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<div class="flex justify-center items-center border-t-2 border-gray-100 py-3 md:space-x-10">
 						<?php
@@ -26,8 +26,9 @@
 						?>
 				</div>
 		</div>
-		<div class="copyright">
-		<p class="text-center text-gray-700 my-1">
+
+		<div class="copyright flex flex-row">
+		<p class="text-left text-gray-700">
 			<small>
 			<?php
 				printf(
@@ -38,7 +39,7 @@
 			?>
 			</small>
 		</p>
-		<p class="text-center text-gray-500 text-sm">
+		<p class="text-right text-gray-500 text-sm">
 				<?php
 					printf(
 						/* translators: %s: WordPress. */
