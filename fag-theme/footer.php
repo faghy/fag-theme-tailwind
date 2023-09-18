@@ -27,24 +27,31 @@
 				</div>
 		</div>
 
-		<div class="copyright flex flex-row">
-		<p class="text-left text-gray-700">
+		<div class="copyright flex flex-row justify-between">
+		<p class="float-left p-2 text-gray-700 ]">
 			<small>
 			<?php
 				printf(
-					/* translators: %s: WordPress. */
-					esc_html__( 'Copyright &copy; %s. All Rights Reserved.', 'cleora' ), 
+					esc_html__( 'Copyright &copy; %s. Rights are free.', 'fagtheme' ),
 					'<a href="' . esc_url( home_url( '/' ) ) . '"rel="home">'.get_bloginfo( 'name' ).'</a>'
 				);
 			?>
 			</small>
 		</p>
-		<p class="text-right text-gray-500 text-sm">
+            <p class="text-center p-2 text-gray-500 text-sm ">
+	            <?php
+	            printf(
+		            esc_html__( 'For help visit %s.', 'fagtheme' ),
+		            '<a href="' . esc_url( __( 'https://dnsbazar.com', 'fagtheme' ) ) . '">dnsbazar</a>'
+	            );
+	            ?>
+            </p>
+
+		<p class="text-right p-2 text-gray-500 text-sm ">
 				<?php
 					printf(
-						/* translators: %s: WordPress. */
-						esc_html__( 'Made with ❤️ by developer of %s.', 'cleora' ),
-						'<a href="' . esc_url( __( 'https://dueclic.com', 'cleora' ) ) . '">dueclic</a>'
+                            esc_html__( 'Created with &#x2764; by %s.', 'fagtheme' ),
+						'<a href="' . esc_url( __( 'https://dueclic.com', 'fagtheme' ) ) . '">dueclic</a>'
 					);
 				?>
 		</p>
