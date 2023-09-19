@@ -23,9 +23,16 @@ Fag theme is distributed under the terms of the GNU GPL.
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-h1 {
-    @apply text-amber-700 text-4xl m-2;
+@layer base {
+    html {
+        font-family: Proxima Nova, system-ui, sans-serif;
+    }
 }
+
+header {
+    @apply bg-stone-300;
+}
+
 main {
     @apply p-2;
 }
@@ -38,10 +45,23 @@ footer {
     @apply mt-6;
 }
 
+h1 {
+    @apply text-amber-700 text-4xl m-2;
+}
+h2 {
+    @apply text-cyan-800 text-3xl m-2;
+}
+h3 {
+    @apply text-lime-600 text-2xl m-2;
+}
+
 a {
     @apply text-indigo-800 font-bold;
 }
 
+p {
+    font-family: 'Quicksand', sans-serif;
+}
 
 
 
