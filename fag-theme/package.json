@@ -1,12 +1,17 @@
 {
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "@babel/core": "^7.22.20",
+    "@babel/cli": "^7.22.15",
+    "@babel/preset-env": "^7.22.20"
   },
   "scripts": {
     "init-tailwind": "npx tailwindcss init",
     "compile-tailwindfag": "nodemon --exec 'tailwindcss -i assets/css/style.css -o dist/style.css' --watch 'assets/css/style.css' --watch './**/*.php' --watch 'assets/js/script.js'",
+    "compile-fagtheme-js": "babel assets/js --out-dir dist/js --watch",
     "watch-fagtheme": "find . -name '*.php' | xargs npm run compile-tailwindfag",
     "stop-watch-fagtheme": "pkill -f 'nodemon --exec tailwindcss -i assets/css/style.css -o dist/style.css'"
   }
 }
+

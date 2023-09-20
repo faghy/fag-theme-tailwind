@@ -43,7 +43,7 @@ article * {
 }
 
 footer {
-    @apply mt-6;
+    @apply  bg-gray-200;
 }
 
 h1 {

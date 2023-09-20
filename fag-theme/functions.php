@@ -6,7 +6,16 @@
  */
 define( 'FAG_THEME_DIR', trailingslashit( get_template_directory() ) );
 
-//require_once FAG_THEME_DIR . '/inc/class-remark-walker-menu.php';
+function my_theme_enqueue_scripts() {
+	// Register custom script
+	wp_register_script('custom-script', get_template_directory_uri() . '/dist/js/script.js', array(), '1.0', true);
+
+	// Include custom script on all pages
+	wp_enqueue_script('custom-script');
+}
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
+
+
 
 
 add_theme_support('custom-logo', array(
