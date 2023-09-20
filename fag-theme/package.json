@@ -5,8 +5,8 @@
   },
   "scripts": {
     "init-tailwind": "npx tailwindcss init",
-    "compile-tailwindfag": "nodemon --exec 'tailwindcss -i style.css -o dist/style.css' --watch 'style.css' --watch './**/*.php'",
+    "compile-tailwindfag": "nodemon --exec 'tailwindcss -i assets/css/style.css -o dist/style.css' --watch 'assets/css/style.css' --watch './**/*.php' --watch 'assets/js/script.js'",
     "watch-fagtheme": "find . -name '*.php' | xargs npm run compile-tailwindfag",
-    "stop-watch-fagtheme": "pkill -f 'nodemon --exec tailwindcss -i style.css -o dist/style.css'"
+    "stop-watch-fagtheme": "pkill -f 'nodemon --exec tailwindcss -i assets/css/style.css -o dist/style.css'"
   }
 }

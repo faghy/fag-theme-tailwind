@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const cssFilePath = "./style.css";
+const cssFilePath = "./assets/css/style.css";
 
 module.exports = {
   content: ['./**/*.php', cssFilePath],

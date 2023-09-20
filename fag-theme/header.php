@@ -23,27 +23,37 @@
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'remark' ); ?></a>
 
-    <div class="container-fluid">
+    <div class="container-fluid bg-yellow-50">
 
-        <header id="master-head" class="site-header py-2">
+        <header id="master-head" class="site-header py-2 flex-row">
             <div class="container-fluid mx-auto">
-                <div class="menu-wrap flex-none md:flex lg:flex items-center gap-12 py-4 md:py-0 lg:py-0 items-center">
+                <div class="flex justify-between gap-12 py-4 md:py-0 lg:py-0 pr-4 items-center">
                     <?php
                     if (function_exists('the_custom_logo')) {
 	                    the_custom_logo();
                     } else {
 	                    bloginfo( 'name' );
                     }
-
-                // Menu
-                wp_nav_menu(array(
-                    'theme_location' => 'main-menu', // name of menu
-                    'container' => 'nav', // wrapper element, example: 'div' o 'nav'
-                    'container_class' => 'menu-class', // CSS classes for element wrapper
-                    'menu_class' => 'menu-ul-class ', // CSS classes for menu list
-                ));
-
                     ?>
+                    <div class="burger-menu">
+                        <div class="burger-icon">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+		                <?php
+		                // Include the existing main navigation menu
+		                wp_nav_menu(array(
+			                'theme_location' => 'main-menu', // Name of the menu
+			                'container' => 'nav', // Wrapper element, e.g., 'div' or 'nav'
+			                'container_class' => 'menu-class', // CSS classes for the element wrapper
+			                'menu_class' => 'mobile-menu', // CSS classes for the menu container
+		                ));
+		                ?>
+                    </div>
+
+
+
                 </div>
             </div>
         </header><!-- #master-head -->

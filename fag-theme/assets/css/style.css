@@ -16,12 +16,13 @@ Text Domain: fagtheme
 Tags: blog, site, tailwind
 
 Fag Theme, (C) 2023 WordPress.org
+tailwindcss v3.1.7 | MIT License | https://tailwindcss.com
 Fag theme is distributed under the terms of the GNU GPL.
 */
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import '../../node_modules/tailwindcss/base.css';
+@import '../../node_modules/tailwindcss/components.css';
+@import '../../node_modules/tailwindcss/utilities.css';
 
 @layer base {
     html {
