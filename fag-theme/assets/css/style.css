@@ -35,6 +35,7 @@ Fag theme is distributed under the terms of the GNU GPL.
 /* Hide the mobile menu and mobile menu toggle by default */
 .mobile-menu, .mobile-menu-toggle, .burger-menu {
     display: none;
+    float: right;
 }
 
 /* Mobile menu style */
@@ -102,6 +103,31 @@ Fag theme is distributed under the terms of the GNU GPL.
     .desktop-menu {
         display: none;
     }
+}
+
+nav.desktop-menu li {
+    display: inline;
+    padding: 10px;
+    text-transform: uppercase;
+}
+nav.desktop-menu li a {
+    color: navy;
+}
+
+.menu-item .sub-menu {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiungi un'ombra se desiderato */
+    z-index: 999;
+}
+
+/* Quando passi sopra una voce del menu con sottomenu, mostra il sottomenu */
+.menu-item.menu-item-has-children:hover .sub-menu {
+    display: block;
 }
 
 /*** MOBILE MENU END ***/
