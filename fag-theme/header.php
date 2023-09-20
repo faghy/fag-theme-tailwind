@@ -13,8 +13,9 @@
 	<?php wp_head(); ?>
     <!-- Load custom stylesheet -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/style.css">
-    <!-- Google Fonts code -->
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Quicksand?subset=latin&noto.script=Latn">
+    <!-- Google Fonts code --
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Quicksand?subset=latin&noto.script=Latn" >-->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 
 </head>
 
@@ -35,21 +36,38 @@
 	                    bloginfo( 'name' );
                     }
                     ?>
-                    <div class="burger-menu">
-                        <div class="burger-icon">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
+
+                    <div class="menu-wrapper">
+                        <nav class="desktop-menu">
+			                <?php
+			                // Include the existing main navigation menu for desktop
+			                wp_nav_menu(array(
+				                'theme_location' => 'main-menu', // Name of the menu
+				                'container' => false, // No wrapper element
+				                'menu_class' => 'menu-class', // CSS classes for the menu container
+			                ));
+			                ?>
+                        </nav>
+
+                        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+                        <label for="mobile-menu-toggle" class="burger-menu">
+                            <div class="burger-icon">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                        </label>
+
+                        <div class="mobile-menu">
+			                <?php
+			                // Include the existing main navigation menu for mobile
+			                wp_nav_menu(array(
+				                'theme_location' => 'main-menu', // Name of the menu
+				                'container' => false, // No wrapper element
+				                'menu_class' => 'mobile-menu-list', // CSS classes for the menu container
+			                ));
+			                ?>
                         </div>
-		                <?php
-		                // Include the existing main navigation menu
-		                wp_nav_menu(array(
-			                'theme_location' => 'main-menu', // Name of the menu
-			                'container' => 'nav', // Wrapper element, e.g., 'div' or 'nav'
-			                'container_class' => 'menu-class', // CSS classes for the element wrapper
-			                'menu_class' => 'mobile-menu', // CSS classes for the menu container
-		                ));
-		                ?>
                     </div>
 
 

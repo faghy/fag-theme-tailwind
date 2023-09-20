@@ -8,7 +8,7 @@ define( 'FAG_THEME_DIR', trailingslashit( get_template_directory() ) );
 
 function my_theme_enqueue_scripts() {
 	// Register custom script
-	wp_register_script('custom-script', get_template_directory_uri() . '/dist/js/script.js', array(), '1.0', true);
+	wp_register_script('custom-script', get_template_directory_uri() . '/dist/script.js', array(), '1.0', true);
 
 	// Include custom script on all pages
 	wp_enqueue_script('custom-script');

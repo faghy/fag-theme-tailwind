@@ -30,6 +30,84 @@ Fag theme is distributed under the terms of the GNU GPL.
     }
 }
 
+/*** MOBILE MENU ***/
+
+/* Hide the mobile menu and mobile menu toggle by default */
+.mobile-menu, .mobile-menu-toggle, .burger-menu {
+    display: none;
+}
+
+/* Mobile menu style */
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-list li {
+    padding: 10px;
+}
+
+/* Burger menu styles */
+.burger-menu {
+    cursor: pointer;
+}
+
+.burger-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333; /* Color of the icon lines */
+    transition: 0.4s; /* Transition to animate menu open/close */
+}
+
+/* Icon lines animation when the menu is active */
+.burger-menu.active .bar:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+}
+
+.burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Show burger menu on mobile devices */
+@media screen and (max-width: 767px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .mobile-menu-toggle:checked + .burger-menu + .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* Other styling for the toggle button */
+    }
+
+    /* Hide the desktop menu on mobile devices */
+    .desktop-menu {
+        display: none;
+    }
+}
+
+/*** MOBILE MENU END ***/
+
+
+
 header {
     @apply bg-stone-300;
 }
