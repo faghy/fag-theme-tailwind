@@ -52,6 +52,7 @@ Fag theme is distributed under the terms of the GNU GPL.
 /* Burger menu styles */
 .burger-menu {
     cursor: pointer;
+    /* Add any other styling for the burger menu */
 }
 
 .burger-icon {
@@ -96,7 +97,7 @@ Fag theme is distributed under the terms of the GNU GPL.
         position: absolute;
         top: 10px;
         right: 10px;
-        /* Other styling for the toggle button */
+        /* Add any other styling for the toggle button */
     }
 
     /* Hide the desktop menu on mobile devices */
@@ -105,30 +106,67 @@ Fag theme is distributed under the terms of the GNU GPL.
     }
 }
 
+/* Desktop menu styles */
+
 nav.desktop-menu li {
     display: inline;
     padding: 10px;
     text-transform: uppercase;
 }
+
 nav.desktop-menu li a {
     color: navy;
+    /* Add any other styling for desktop menu links */
 }
 
-.menu-item .sub-menu {
+/* Submenu styles */
+.menu-item.menu-item-has-children {
+    position: relative;
+}
+
+.menu-item .sub-menu,
+.menu-item .sub-menu .sub-menu {
+    padding: 10px;
     display: none;
     position: absolute;
-    top: 30%;
-    left: 0;
+    top: 100%;
+    right: 10%;
     background-color: #fff;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiungi un'ombra se desiderato */
+    width: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 999;
+    /* Add any other styling for submenus */
+}
+.menu-item .sub-menu,
+.menu-item .sub-menu a {
+    font-size: small ;
+    font-weight: normal;
 }
 
-/* Quando passi sopra una voce del menu con sottomenu, mostra il sottomenu */
-.menu-item.menu-item-has-children:hover .sub-menu {
+/* When hovering over a menu item with submenu, show the submenu */
+.menu-item.menu-item-has-children:hover > .sub-menu {
     display: block;
 }
+
+/* Styles for submenus of submenus */
+.menu-item .sub-menu .sub-menu {
+    left: 100%;
+    top: 0;
+    display: none;
+    /* Add any other styling for submenus of submenus */
+}
+
+/* When hovering over a top-level item with a submenu and a submenu of submenus is open, show the submenu of submenus */
+.menu-item.menu-item-has-children:hover > .sub-menu .sub-menu {
+    display: none;
+}
+
+/* When hovering over a second-level item with a submenu, show only its submenu */
+.menu-item .sub-menu .menu-item-has-children:hover > .sub-menu {
+    display: block;
+}
+
+
 
 /*** MOBILE MENU END ***/
 
