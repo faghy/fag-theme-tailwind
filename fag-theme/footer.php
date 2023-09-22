@@ -1,15 +1,3 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Cleora
- */
-
-?>
 	<!-- #footer -->
 	<footer class="relative border-t-2 border-gray-300">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">

@@ -15,6 +15,8 @@ function my_theme_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 
+// Add support for featured images
+add_theme_support('post-thumbnails');
 
 
 
