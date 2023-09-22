@@ -30,153 +30,8 @@ Fag theme is distributed under the terms of the GNU GPL.
     }
 }
 
-/*** MOBILE MENU ***/
-
-/* Hide the mobile menu and mobile menu toggle by default */
-.mobile-menu, .mobile-menu-toggle, .burger-menu {
-    display: none;
-    float: right;
-}
-
-/* Mobile menu style */
-.mobile-menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mobile-menu-list li {
-    padding: 10px;
-}
-
-/* Burger menu styles */
-.burger-menu {
-    cursor: pointer;
-    /* Add any other styling for the burger menu */
-}
-
-.burger-icon {
-    width: 30px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.bar {
-    width: 100%;
-    height: 3px;
-    background-color: #333; /* Color of the icon lines */
-    transition: 0.4s; /* Transition to animate menu open/close */
-}
-
-/* Icon lines animation when the menu is active */
-.burger-menu.active .bar:nth-child(1) {
-    transform: translateY(5px) rotate(45deg);
-}
-
-.burger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.burger-menu.active .bar:nth-child(3) {
-    transform: translateY(-5px) rotate(-45deg);
-}
-
-/* Show burger menu on mobile devices */
-@media screen and (max-width: 767px) {
-    .burger-menu {
-        display: block;
-    }
-
-    .mobile-menu-toggle:checked + .burger-menu + .mobile-menu {
-        display: block;
-    }
-
-    .mobile-menu-toggle {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        /* Add any other styling for the toggle button */
-    }
-
-    /* Hide the desktop menu on mobile devices */
-    .desktop-menu {
-        display: none;
-    }
-}
-
-/* Desktop menu styles */
-
-nav.desktop-menu li {
-    display: inline;
-    padding: 10px;
-    text-transform: uppercase;
-}
-
-nav.desktop-menu li a {
-    color: navy;
-    /* Add any other styling for desktop menu links */
-}
-
-/* Submenu styles */
-.menu-item.menu-item-has-children {
-    position: relative;
-}
-
-.menu-item .sub-menu,
-.menu-item .sub-menu .sub-menu {
-    padding: 10px;
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 10%;
-    background-color: #f6f1ed;
-    width: auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    /* Add any other styling for submenus */
-}
-.menu-item .sub-menu,
-.menu-item .sub-menu a {
-    font-size: small ;
-    font-weight: normal;
-}
-
-/* When hovering over a menu item with submenu, show the submenu */
-.menu-item.menu-item-has-children:hover > .sub-menu {
-    display: block;
-}
-
-/* Styles for submenus of submenus */
-.menu-item .sub-menu .sub-menu {
-    background-color: #faede3;
-    right: 100%;
-    top: 0;
-    display: none;
-    /* Add any other styling for submenus of submenus */
-}
-
-/* When hovering over a top-level item with a submenu and a submenu of submenus is open, show the submenu of submenus */
-.menu-item.menu-item-has-children:hover > .sub-menu .sub-menu {
-    display: none;
-}
-
-/* When hovering over a second-level item with a submenu, show only its submenu */
-.menu-item .sub-menu .menu-item-has-children:hover > .sub-menu {
-    display: block;
-}
-
-ul.sub-menu li {
-    display: block;
-}
-
-/*** MOBILE MENU END ***/
-
-
-
 header {
-    @apply bg-stone-300;
+    @apply bg-stone-400;
 }
 
 main {
@@ -211,6 +66,118 @@ p {
 
 
 
+/*** MOBILE MENU ***/
+
+/* Hide the mobile menu and mobile menu toggle by default */
+.mobile-menu,
+.mobile-menu-toggle,
+.burger-menu {
+    @apply hidden float-right;
+}
+
+/* Mobile menu style */
+.mobile-menu-list {
+    @apply m-0 p-0;
+    list-style: none;
+}
+.mobile-menu-list li {
+    @apply p-2.5;
+}
+
+/* Burger menu styles */
+.burger-menu {
+    @apply cursor-pointer;
+    /* Add any other styling for the burger menu */
+}
+.burger-icon {
+    @apply w-[30px] h-5 flex flex-col justify-between;
+}
+.bar {
+    @apply w-full h-[3px] bg-gray-800 transition-[0.4s];
+    /* Color of the icon lines */
+    /* Transition to animate menu open/close */
+}
+
+/* Icon lines animation when the menu is active */
+.burger-menu.active .bar:nth-child(1) {
+    @apply translate-y-[5px] rotate-45;
+}
+.burger-menu.active .bar:nth-child(2) {
+    @apply opacity-0;
+}
+.burger-menu.active .bar:nth-child(3) {
+    @apply translate-y-[-5px] -rotate-45;
+}
+
+/* Show burger menu on mobile devices */
+@media screen and (max-width: 767px) {
+    .burger-menu {
+        @apply block;
+    }
+    .mobile-menu-toggle:checked + .burger-menu + .mobile-menu {
+        @apply block;
+    }
+    .mobile-menu-toggle {
+        @apply absolute right-2.5 top-2.5;
+        /* Add any other styling for the toggle button */
+    }
+    /* Hide the desktop menu on mobile devices */
+    .desktop-menu {
+        @apply hidden;
+    }
+}
+
+/* Desktop menu styles */
+nav.desktop-menu li {
+    @apply inline uppercase p-2.5;
+}
+nav.desktop-menu li a {
+    @apply text-zinc-700;
+    /* Add any other styling for desktop menu links */
+}
+
+/* Submenu styles */
+.menu-item.menu-item-has-children {
+    @apply relative;
+}
+span.arrow-down {
+    @apply text-sm text-zinc-700 whitespace-nowrap relative bottom-0.5
+}
+.menu-item .sub-menu,
+.menu-item .sub-menu .sub-menu {
+    @apply hidden absolute bg-gray-100 w-auto shadow-[0_2px_5px_rgba(0,0,0,0.2)] z-[999] p-2.5 right-[10%] top-full;
+    /* Add any other styling for submenus */
+}
+.menu-item .sub-menu,
+.menu-item .sub-menu a {
+    @apply text-[small] font-[normal];
+}
+
+/* When hovering over a menu item with submenu, show the submenu */
+.menu-item.menu-item-has-children:hover > .sub-menu {
+    @apply block;
+}
+
+/* Styles for submenus of submenus */
+.menu-item .sub-menu .sub-menu {
+    @apply bg-rose-50 hidden right-full top-0;
+    /* Add any other styling for submenus of submenus */
+}
+
+/* When hovering over a top-level item with a submenu and a submenu of submenus is open, show the submenu of submenus */
+.menu-item.menu-item-has-children:hover > .sub-menu .sub-menu {
+    @apply hidden;
+}
+
+/* When hovering over a second-level item with a submenu, show only its submenu */
+.menu-item .sub-menu .menu-item-has-children:hover > .sub-menu {
+    @apply block;
+}
+ul.sub-menu li {
+    @apply block;
+}
+
+/*** MOBILE MENU END ***/
 
 
 
