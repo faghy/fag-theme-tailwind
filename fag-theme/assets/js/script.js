@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Menu MOBILE
     const burgerMenu = document.querySelector('.burger-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileMenu.classList.toggle('active'); // Add/Remove the "active" class to the mobile menu
     });
 
+    // SUB-MENU
     const menuItemHasChildren = document.querySelectorAll('.menu-item-has-children');
 
     menuItemHasChildren.forEach(function (menuItem) {

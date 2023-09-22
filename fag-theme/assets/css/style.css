@@ -131,7 +131,7 @@ nav.desktop-menu li a {
     position: absolute;
     top: 100%;
     right: 10%;
-    background-color: #fff;
+    background-color: #f6f1ed;
     width: auto;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 999;
@@ -150,7 +150,8 @@ nav.desktop-menu li a {
 
 /* Styles for submenus of submenus */
 .menu-item .sub-menu .sub-menu {
-    left: 100%;
+    background-color: #faede3;
+    right: 100%;
     top: 0;
     display: none;
     /* Add any other styling for submenus of submenus */
@@ -166,7 +167,9 @@ nav.desktop-menu li a {
     display: block;
 }
 
-
+ul.sub-menu li {
+    display: block;
+}
 
 /*** MOBILE MENU END ***/
 
