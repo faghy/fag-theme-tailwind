@@ -31,4 +31,9 @@ if (comments_open() || get_comments_number()) :
 
 <?php
 endif;
+$archive_link = get_permalink(get_option('page_for_posts')); // Link to the general post archive page
 ?>
+<hr class="mt-2" />
+<div class="return-to-archive mt-4 mb-2 text-center">
+    <a href="<?php echo esc_url($archive_link); ?>" >Return Archive</a>
+</div>

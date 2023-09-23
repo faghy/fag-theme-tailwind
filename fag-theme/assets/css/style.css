@@ -65,10 +65,10 @@ p {
 }
 
 ol.commentlist > li {
-    @apply mt-4 pt-2  border-t-2
+    @apply mt-4 pt-2  border-t-2 border-t-slate-300
 }
 ul.children div.comment-body {
-    @apply mt-4 pt-2 border-t-2
+    @apply mt-4 pt-2 border-t-2 border-t-blue-100
 }
 
 
