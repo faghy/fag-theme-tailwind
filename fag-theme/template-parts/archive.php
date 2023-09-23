@@ -6,7 +6,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>"
-    <?php post_class('w-2/5 inline-flex flow-hidden group border rounded-lg shadow-xl hover:shadow shadow-gray-500/50 transition duration-150'); ?>>
+    <?php post_class('w-[49%] inline-flex flow-hidden group border rounded-lg shadow-xl hover:shadow shadow-gray-500/50 transition duration-150'); ?>>
 
 	<div class="p-4">
 		<p class="text-xs title-font font-medium text-gray-400 my-0">
@@ -31,3 +31,5 @@
 		</div>
 	</div>
 </article>
+
+

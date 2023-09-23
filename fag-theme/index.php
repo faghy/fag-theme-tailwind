@@ -7,16 +7,44 @@ get_header();
 ?>
     <main id="primary" class="site-main">
         <div class="flex">
-            <div class="w-full"> <!-- add class for change page width, es: md:w-1/2 lg:w-3/4 -->
-					<?php
-					if ( have_posts() ) :
-						if ( is_home() && ! is_front_page() ) : // if is archive page and not home
-							while ( have_posts() ) :
-								the_post();
-                                get_template_part( 'template-parts/archive');
-							endwhile;
-						else :
+            <div class="grow w-full"> <!-- add class for change page width, es: md:w-1/2 lg:w-3/4 -->
+                <?php
+                if ( have_posts() ) :
+                    if ( is_home() && ! is_front_page() ) : // if is archive page and not home
+                        while ( have_posts() ) :
+                            the_post();
+                            get_template_part( 'template-parts/archive');
+                        endwhile;
+                    ?>
+            <!-- Pagination -->
+                <div class="pagination mt-6 mb-1">
+                    <?php
+                    global $wp_query;
 
+                    $big = 999999999; // Very large number to ensure the numbering works correctly
+
+                    echo paginate_links(array(
+                        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                        'format' => '?paged=%#%',
+                        'current' => max(1, get_query_var('paged')),
+                        'total' => $wp_query->max_num_pages,
+                        'prev_text' => __('&laquo; Previous'),
+                        'next_text' => __('Next &raquo;'),
+                    ));
+                    ?>
+                </div>
+            </div>
+                <!-- Sidebar -->
+                        <div class="archive-sidebar">
+							<?php
+							if (is_active_sidebar('primary-sidebar')) {
+								dynamic_sidebar('primary-sidebar');
+							}
+							?>
+                        </div>
+					<?php
+
+						else :
                             /* Start the Loop */
                             while ( have_posts() ) :
                                 the_post();
@@ -40,9 +68,10 @@ get_header();
 
 					else :
 						get_template_part( 'template-parts/content', get_post_format() );
-					endif;
+
+
+                        endif;
 					?>
-            </div>
         </div>
     </main><!-- #main -->
 
