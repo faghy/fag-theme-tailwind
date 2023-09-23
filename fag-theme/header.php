@@ -13,9 +13,9 @@
 	<?php wp_head(); ?>
     <!-- Load custom stylesheet -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/style.css">
-    <!-- Google Fonts code --
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Quicksand?subset=latin&noto.script=Latn" >-->
+    <!-- Google Fonts code -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <title><?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?></title>
 
 </head>
 
