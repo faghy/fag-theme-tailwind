@@ -64,6 +64,12 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
+ol.commentlist > li {
+    @apply mt-4 pt-2  border-t-2
+}
+ul.children div.comment-body {
+    @apply mt-4 pt-2 border-t-2
+}
 
 
 /*** MOBILE MENU ***/
