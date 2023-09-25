@@ -21,7 +21,7 @@
 			<?php
 				printf(
 					esc_html__( 'Copyright &copy; %s. Rights are free.', 'fagtheme' ),
-					'<a href="' . esc_url( home_url( '/' ) ) . '"rel="home">'.get_bloginfo( 'name' ).'</a>'
+					'<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">'.get_bloginfo( 'name' ).'</a>'
 				);
 			?>
 			</small>
@@ -30,7 +30,7 @@
 	            <?php
 	            printf(
 		            esc_html__( 'For help visit %s.', 'fagtheme' ),
-		            '<a href="' . esc_url( __( 'https://dnsbazar.com', 'fagtheme' ) ) . '">dnsbazar</a>'
+		            '<a href="' . esc_url( __( '', 'fagtheme' ) ) . '">dnsbazar</a>'
 	            );
 	            ?>
             </p>

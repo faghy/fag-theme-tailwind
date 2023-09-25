@@ -35,7 +35,7 @@ get_header();
                 </div>
             </div>
                 <!-- Sidebar -->
-                        <div class="archive-sidebar">
+            <div class="archive-sidebar">
 							<?php
 							if (is_active_sidebar('primary-sidebar')) {
 								dynamic_sidebar('primary-sidebar');
@@ -43,7 +43,6 @@ get_header();
 							?>
                         </div>
 					<?php
-
 						else :
                             /* Start the Loop */
                             while ( have_posts() ) :
@@ -72,8 +71,10 @@ get_header();
 
                         endif;
 					?>
+            </div>
         </div>
     </main><!-- #main -->
+
 
 </div><!-- fag .container-fluid -->
 </div>
