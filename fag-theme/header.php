@@ -16,16 +16,13 @@
     <!-- Google Fonts code -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <title><?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?></title>
-
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'remark' ); ?></a>
-
     <div class="container-fluid bg-slate-100">
-
         <header id="master-head" class="site-header py-2 flex-row">
             <div class="container-fluid mx-auto">
                 <div class="flex justify-between gap-12 py-4 md:py-0 lg:py-0 pr-4 items-center">
@@ -51,13 +48,12 @@
 
                         <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
                         <label for="mobile-menu-toggle" class="burger-menu">
-                            <div class="burger-icon">
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                            </div>
+                            <span class="burger-icon">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </span>
                         </label>
-
                         <div class="mobile-menu">
 			                <?php
 			                // Include the existing main navigation menu for mobile
@@ -69,9 +65,6 @@
 			                ?>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </header><!-- #master-head -->

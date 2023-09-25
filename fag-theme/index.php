@@ -76,5 +76,6 @@ get_header();
     </main><!-- #main -->
 
 </div><!-- fag .container-fluid -->
+</div>
 <?php
 get_footer();
