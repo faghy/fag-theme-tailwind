@@ -1,8 +1,8 @@
 === tailfagtheme ===
 Contributors: dueclic
 Tags: right-sidebar,  two-columns, custom-menu, custom-logo, threaded-comments
-Requires at least: 7.4.29
-Tested up to: 8.2.10
+Requires at least: 5.9
+Tested up to: 6.3.1
 Requires PHP: 7.4.29
 Stable tag: 1.0.1
 License: GPLv2 or later
