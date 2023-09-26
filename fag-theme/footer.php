@@ -30,7 +30,7 @@
 	            <?php
 	            printf(
 		            esc_html__( 'For help visit %s.', 'fagtheme' ),
-		            '<a href="' . esc_url( __( '', 'fagtheme' ) ) . '">dnsbazar</a>'
+		            '<a href="' . esc_url( __( 'https://www.bloccoappunti.it/how-to-use-tailfagtheme-for-wordpress-development-directly-on-plesk/', 'fagtheme' ) ) . '">this post</a>'
 	            );
 	            ?>
             </p>

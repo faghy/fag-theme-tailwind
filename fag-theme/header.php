@@ -1,7 +1,7 @@
 <?php
 /**
- * fag Theme
- * @link https://dueclic.com
+ * Tailwind-Fag-Theme
+ * @link https://github.com/faghy/fag-theme-tailwind/settings
  */
 
 ?>

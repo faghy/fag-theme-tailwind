@@ -1,8 +1,9 @@
 <?php
-
 /**
- * Fag Theme
+ * Tailwind-Fag-Theme
+ * @link https://github.com/faghy/fag-theme-tailwind/settings
  */
+
 get_header();
 ?>
     <main id="primary" class="site-main">
