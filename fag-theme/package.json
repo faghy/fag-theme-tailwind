@@ -10,9 +10,9 @@
   "scripts": {
     "init-tailwind": "tailwindcss init",
     "compile-tailwindfag": "nodemon --exec 'tailwindcss -i assets/css/style.css -o dist/style.css' --watch 'assets/css/style.css' --watch './**/*.php'",
-    "compile-fagtheme-js": "babel assets/js --out-dir dist --watch",
-    "watch-fagtheme": "npm-run-all -p compile-tailwindfag compile-fagtheme-js",
-    "stop-watch-fagtheme": "pkill -f 'nodemon --exec tailwindcss -i assets/css/style.css -o dist/style.css' && pkill -f 'babel assets/js --out-dir dist'"
+    "compile-tailfagtheme-js": "babel assets/js --out-dir dist --watch",
+    "watch-tailfagtheme": "npm-run-all -p compile-tailwindfag compile-tailfagtheme-js",
+    "stop-watch-tailfagtheme": "pkill -f 'nodemon --exec tailwindcss -i assets/css/style.css -o dist/style.css' && pkill -f 'babel assets/js --out-dir dist'"
   }
 }
 

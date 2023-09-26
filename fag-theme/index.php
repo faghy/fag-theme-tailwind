@@ -29,8 +29,8 @@ get_header();
                         'format' => '?paged=%#%',
                         'current' => max(1, get_query_var('paged')),
                         'total' => $wp_query->max_num_pages,
-                        'prev_text' => __('&laquo; Previous'),
-                        'next_text' => __('Next &raquo;'),
+                        'prev_text' => __('&laquo; Previous','tailfagtheme'),
+                        'next_text' => __('Next &raquo;','tailfagtheme'),
                     ));
                     ?>
                 </div>

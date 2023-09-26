@@ -13,7 +13,7 @@
 					<?php get_search_form(); ?>
 				</section>
 				<section class="widget">
-					<h2 class="widget-title"><?php esc_html_e( 'Archives', 'fagtheme' ); ?></h2>
+					<h2 class="widget-title"><?php esc_html_e( 'Archives', 'tailfagtheme' ); ?></h2>
 					<ul>
 						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 					</ul>

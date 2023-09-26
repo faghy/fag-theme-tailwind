@@ -6,6 +6,9 @@
  */
 define( 'FAG_THEME_DIR', trailingslashit( get_template_directory() ) );
 
+// Add support for the <title> tag
+add_theme_support("title-tag");
+
 function my_theme_enqueue_scripts() {
 	// Register custom script
 	wp_register_script('custom-script', get_template_directory_uri() . '/dist/script.js', array(), '1.0', true);
@@ -39,12 +42,12 @@ add_theme_support('custom-logo', array(
 ));
 
 function register_my_menus() {
-	load_theme_textdomain( 'fagtheme', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'tailfagtheme', get_template_directory() . '/languages' );
 
 	register_nav_menus(
 		array(
-			'main-menu' => __( 'Main Menu', 'fagtheme' ),
-			'footer-menu' => __( 'Footer Menu', 'fagtheme' ),
+			'main-menu' => __( 'Main Menu', 'tailfagtheme' ),
+			'footer-menu' => __( 'Footer Menu', 'tailfagtheme' ),
 			// if you want add other positions
 		)
 	);

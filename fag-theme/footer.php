@@ -20,7 +20,7 @@
 			<small>
 			<?php
 				printf(
-					esc_html__( 'Copyright &copy; %s. Rights are free.', 'fagtheme' ),
+					esc_html__( 'Copyright &copy; %s. Rights are free.', 'tailfagtheme' ),
 					'<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">'.get_bloginfo( 'name' ).'</a>'
 				);
 			?>
@@ -29,8 +29,8 @@
             <p class="text-center p-2 text-gray-500 text-sm ">
 	            <?php
 	            printf(
-		            esc_html__( 'For help visit %s.', 'fagtheme' ),
-		            '<a href="' . esc_url( __( 'https://www.bloccoappunti.it/how-to-use-tailfagtheme-for-wordpress-development-directly-on-plesk/', 'fagtheme' ) ) . '">this post</a>'
+		            esc_html__( 'For help visit %s.', 'tailfagtheme' ),
+		            '<a href="' . esc_url( __( 'https://www.bloccoappunti.it/how-to-use-tailfagtheme-for-wordpress-development-directly-on-plesk/', 'tailfagtheme' ) ) . '">this post</a>'
 	            );
 	            ?>
             </p>
@@ -38,8 +38,8 @@
 		<p class="text-right p-2 text-gray-500 text-sm ">
 				<?php
 					printf(
-                            esc_html__( 'Created with &#x2764; by %s.', 'fagtheme' ),
-						'<a href="' . esc_url( __( 'https://dueclic.com', 'fagtheme' ) ) . '">dueclic</a>'
+                            esc_html__( 'Created with &#x2764; by %s.', 'tailfagtheme' ),
+						'<a href="' . esc_url( __( 'https://dueclic.com', 'tailfagtheme' ) ) . '">dueclic</a>'
 					);
 				?>
 		</p>

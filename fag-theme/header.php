@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php wp_head(); ?>
     <!-- Load custom stylesheet -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/style.css">
+	<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/dist/style.css">
     <!-- Google Fonts code -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <title><?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?></title>
@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'fagtheme' ); ?></a>
+    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tailfagtheme' ); ?></a>
     <div class="container-fluid bg-slate-100">
         <header id="master-head" class="site-header py-2 flex-row">
             <div class="container-fluid mx-auto">

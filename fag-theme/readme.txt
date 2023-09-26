@@ -8,7 +8,7 @@ Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Tailfag is a WordPress Blog Theme for personal use.
+tailfagtheme is a WordPress Blog Theme for personal use.
 
 == Description ==
 Tailfagtheme is a WordPress theme for personal use. It features a fully responsive design and is built upon the popular Tailwind CSS utility framework, Google Fonts, and HTML5.
