@@ -9,6 +9,16 @@ define( 'FAG_THEME_DIR', trailingslashit( get_template_directory() ) );
 // Add support for the <title> tag
 add_theme_support("title-tag");
 
+// Add pagination support
+add_theme_support('wp-pagenavi');
+
+function my_theme_setup() {
+	// Add support for automatic feeds
+	add_theme_support('automatic-feed-links');
+}
+add_action('after_setup_theme', 'my_theme_setup');
+
+
 function my_theme_enqueue_scripts() {
 	// Register custom script
 	wp_register_script('custom-script', get_template_directory_uri() . '/dist/script.js', array(), '1.0', true);
