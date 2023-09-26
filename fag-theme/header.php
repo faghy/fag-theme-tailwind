@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'remark' ); ?></a>
+    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'fagtheme' ); ?></a>
     <div class="container-fluid bg-slate-100">
         <header id="master-head" class="site-header py-2 flex-row">
             <div class="container-fluid mx-auto">
