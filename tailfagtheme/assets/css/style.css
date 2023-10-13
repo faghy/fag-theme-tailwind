@@ -22,6 +22,18 @@ Fag theme is distributed under the terms of the GNU GPL.
 @import '../../node_modules/tailwindcss/components.css';
 @import '../../node_modules/tailwindcss/utilities.css';
 
+/* style for .screen-reader-text wordpress class */
+.screen-reader-text {
+    position: absolute;
+    top: -9999em; /* Sposta il testo al di fuori del viewport */
+    left: -9999em; /* Invisibile per gli utenti visivi */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
 @layer base {
     html {
         font-family: Proxima Nova, system-ui, sans-serif;

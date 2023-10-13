@@ -23,6 +23,7 @@ function my_theme_setup() {
 	add_theme_support('customize-selective-refresh-widgets');
 	add_theme_support('starter-content');
 	add_theme_support('automatic-feed-links');
+	add_theme_support('comments');
 }
 add_action('after_setup_theme', 'my_theme_setup');
 
@@ -71,3 +72,19 @@ function register_my_menus() {
 	);
 }
 add_action( 'init', 'register_my_menus' );
+
+/* Load comment-reply.js wp file to activate comments reply */
+function enqueue_comment_reply_script() {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_comment_reply_script' );
+
+
+/* CSS for WP Editor */
+function custom_editor_styles() {
+	add_editor_style('assets/style.css'); // Your CSS file
+}
+add_action('admin_init', 'custom_editor_styles');

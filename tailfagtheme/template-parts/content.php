@@ -26,7 +26,7 @@ if (comments_open() || get_comments_number()) :
 	?>
     <hr />
     <div id="comments" class="comments-area mt-10">
-		<?php comments_template(); ?>
+		<?php comments_template() . comment_form(); ?>
     </div>
 
 <?php

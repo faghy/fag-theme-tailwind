@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/dist/style.css">
     <!-- Google Fonts code -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-    <title><?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?></title>
 </head>
 
 <body <?php body_class(); ?>>
