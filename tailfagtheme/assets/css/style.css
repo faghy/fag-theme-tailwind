@@ -125,7 +125,7 @@ ul.children div.comment-body {
     @apply translate-y-[-5px] -rotate-45;
 }
 
-/* Show burger menu on mobile devices */
+/* Show burger menu adn hide sidebar on mobile devices */
 @media screen and (max-width: 767px) {
     .burger-menu {
         @apply block;
@@ -141,6 +141,11 @@ ul.children div.comment-body {
     .desktop-menu {
         @apply hidden;
     }
+
+    div.archive-sidebar {
+        @apply hidden;
+    }
+
 }
 
 /* Desktop menu styles */

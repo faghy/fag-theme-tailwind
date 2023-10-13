@@ -36,7 +36,7 @@ get_header();
                 </div>
             </div>
                 <!-- Sidebar -->
-            <div class="archive-sidebar">
+            <div class="archive-sidebar w-1/4">
 							<?php
 							if (is_active_sidebar('primary-sidebar')) {
 								dynamic_sidebar('primary-sidebar');
